@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import { Photo } from '../../photos'
+import Image from "next/image";
+import { Photo } from "../../photos";
+import Link from "next/link";
 
 export default function Frame({ photo }: { photo: Photo }) {
   return (
@@ -15,7 +16,8 @@ export default function Frame({ photo }: { photo: Photo }) {
       <div className="bg-white p-4 px-6">
         <h3>{photo.name}</h3>
         <p>Taken by {photo.username}</p>
+        <Link href="/test">Go to /test</Link>
       </div>
     </>
-  )
+  );
 }
